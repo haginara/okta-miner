@@ -68,10 +68,10 @@ class UserMiner(BasePollerFT):
             verify=self.verify_cert
         )
         try:
-            r.raise_for_status()
+            response.raise_for_status()
         except:
             logger.debug('%s - exception in request: %s %s', 
-                self.name, r.status_code, r.content)
+                self.name, response.status_code, response.content)
             raise
             
         return json.loads(response.content)

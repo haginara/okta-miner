@@ -7,7 +7,7 @@ prototypes:
     author: jonghak choi
     class: oktaminer.UserMiner
     development_status: EXPERIMENTAL
-    node_type: MINOR
+    node_type: MINER
     indicator_types:
       - IP
     tags:

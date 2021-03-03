@@ -42,6 +42,8 @@ class UserMiner(BasePollerFT):
         self.time_window = self.config.get('time_window', 8)
         self.verify_cert = self.config.get('verify_cert', True)
 
+        self.limit = self.config.get('limit', 1000)
+
         self.company = self.config.get('company', None)
         if self.company is None:
             raise ValueError('%s - API token is required' % (self.company))
@@ -53,8 +55,9 @@ class UserMiner(BasePollerFT):
 
     def _build_iterator(self, item):
         since = datetime.utcnow() - timedelta(hours=self.time_window)
-        url = 'https://{company}.okta.com/api/v1/logs?since={since}&filter=eventType eq "user.session.start"'.format(
+        url = 'https://{company}.okta.com/api/v1/logs?limit={limit}&since={since}&filter=eventType eq "user.session.start"'.format(
             company=self.company,
+            limit=self.limit,
             since=datetime.strftime(since, "%Y-%m-%dT%H:%M:%S.000Z")
         )
         headers = {
@@ -73,7 +76,6 @@ class UserMiner(BasePollerFT):
             logger.debug('%s - exception in request: %s %s', 
                 self.name, response.status_code, response.content)
             raise
-            
         return json.loads(response.content)
 
     def _process_item(self, item):

@@ -22,6 +22,7 @@ prototypes:
       source_name: 'okta.useractivities'
       verify_cert: true
       time_window: 8
+      limit: 1000
       age_out:
         default: null
         sudden_death: true

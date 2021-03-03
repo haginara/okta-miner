@@ -23,7 +23,10 @@ prototypes:
       verify_cert: true
       time_window: 8
       age_out:
-        sudden_death: false
-        default: none
+        default: null
+        sudden_death: true
+        interval: 257
       attributes:
+        type: IPv4
+        confidence: 100
         share_level: green

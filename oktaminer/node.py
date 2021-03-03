@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 class Miner(BasePollerFT):
     def configure(self):
         super(Miner, self).configure()
-        
+        self.multiple_indicator_types = self.config.get('multiple_indicator_types', False)
         self.polling_timeout = self.config.get('polling_timeout', 20)
         self.time_window = self.config.get('time_window', 8)
         self.verify_cert = self.config.get('verify_cert', True)
@@ -35,6 +35,7 @@ class UserMiner(BasePollerFT):
         """
         https://<company>.okta.com/api/v1/logs?since=2021-02-24T00:00:00.000Z&filter=eventType eq "user.session.start"
         """
+        self.multiple_indicator_types = self.config.get('multiple_indicator_types', False)
         self.polling_timeout = self.config.get('polling_timeout', 20)
         self.time_window = self.config.get('time_window', 8)
         self.verify_cert = self.config.get('verify_cert', True)

@@ -13,3 +13,14 @@ prototypes:
     tags:
       - extension
       - oktaminer
+    description: >
+      mine an User activities, you need to create a new prototype based on this with 
+      a valid Okta API Key
+    config:
+      company: '<place a company name here>'
+      api_key: '<place a valid API Key here>'
+      source_name: 'okta.useractivities'
+      verify_cert: true
+      time_window: 8
+      attributes:
+        share_level: green

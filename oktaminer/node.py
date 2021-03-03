@@ -15,7 +15,14 @@ class Miner(BasePollerFT):
         self.polling_timeout = self.config.get('polling_timeout', 20)
         self.time_window = self.config.get('time_window', 8)
         self.verify_cert = self.config.get('verify_cert', True)
-        self.api_token = self.config.get('api_token', '')
+
+        self.company = self.config.get('company', None)
+        if self.company is None:
+            raise ValueError('%s - API token is required' % (self.company))
+
+        self.api_key = self.config.get('api_key', None)
+        if self.api_key is None:
+            raise ValueError('%s - API key is required' % (self.api_key))
 
     def _build_iterator(self, item):
         pass
@@ -31,7 +38,6 @@ class UserMinoer(BasePollerFT):
         self.polling_timeout = self.config.get('polling_timeout', 20)
         self.time_window = self.config.get('time_window', 8)
         self.verify_cert = self.config.get('verify_cert', True)
-        self.api_token = self.config.get('api_token', '')
 
         self.company = self.config.get('company', None)
         if self.company is None:

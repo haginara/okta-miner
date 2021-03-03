@@ -22,5 +22,8 @@ prototypes:
       source_name: 'okta.useractivities'
       verify_cert: true
       time_window: 8
+      age_out:
+        sudden_death: false
+        default: none
       attributes:
         share_level: green

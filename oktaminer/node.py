@@ -2,7 +2,7 @@ import logging
 import json
 from datetime import datetime
 from datetime import timedelta
-import rquests
+import requests
 
 from minemeld.ft.basepoller import BasePollerFT
 

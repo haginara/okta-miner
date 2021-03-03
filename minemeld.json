@@ -1,0 +1,18 @@
+{
+    "version": "0.1",
+    "name": "okta-miner",
+    "author": "haginara",
+    "author_email": "haginara@gmail.com",
+    "description": "Sample MineMeld node extension for mining Okta user activity",
+    "url": "",
+    "entry_points": {
+        "minemeld_nodes": {
+            "oktaminer.Miner": "oktaminer.node:Miner",
+            "oktaminer.UserMiner": "oktaminer.node:UserMinro"
+        },
+        "minemeld_prototypes": {
+            "oktaminer.prototypes": "oktaminer:prototypes"
+        }
+    },
+    "manifest_version": 0
+}

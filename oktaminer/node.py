@@ -30,7 +30,7 @@ class Miner(BasePollerFT):
     def _process_item(self, item):
         pass
 
-class UserMinoer(BasePollerFT):
+class UserMiner(BasePollerFT):
     def configure(self):
         """
         https://<company>.okta.com/api/v1/logs?since=2021-02-24T00:00:00.000Z&filter=eventType eq "user.session.start"

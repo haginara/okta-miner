@@ -3,8 +3,8 @@
     "name": "okta-miner",
     "author": "haginara",
     "author_email": "haginara@gmail.com",
-    "description": "Sample MineMeld node extension for mining Okta user activity",
-    "url": "",
+    "description": "Simple MineMeld node extension for mining Okta user activity",
+    "url": "https://github.com/haginara/okta-minor",
     "entry_points": {
         "minemeld_nodes": {
             "oktaminer.Miner": "oktaminer.node:Miner",

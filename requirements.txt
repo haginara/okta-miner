@@ -1,2 +1,2 @@
-minemeld-core>=0.931b2
+minemeld-core>=0.9
 requests

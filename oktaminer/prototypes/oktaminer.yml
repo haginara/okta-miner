@@ -1,1 +1,15 @@
-url: https://github.com/haginara/okta-minor
+url: https://github.com/haginara/okta-miner
+description: >
+  Okta extension for MineMeld.
+
+prototypes:
+  userMinor:
+    author: jonghak choi
+    class: oktaminer.UserMiner
+    development_status: EXPERIMENTAL
+    node_type: minor
+    indicator_types:
+      - IP
+    tags:
+      - extension
+      - oktaminer

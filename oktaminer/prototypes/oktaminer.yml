@@ -9,7 +9,7 @@ prototypes:
     development_status: EXPERIMENTAL
     node_type: miner
     indicator_types:
-      - IP
+      - IPv4
     tags:
       - extension
       - oktaminer

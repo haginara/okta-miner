@@ -81,7 +81,7 @@ class UserMiner(BasePollerFT):
     def _process_item(self, item):
         indicator = item['client']['ipAddress']
         value = {
-            'type': 'IP',
+            'type': 'IPv4',
             'confidence': 100
         }
         return [[indicator, value]]

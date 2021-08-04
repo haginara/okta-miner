@@ -8,7 +8,8 @@
     "entry_points": {
         "minemeld_nodes": {
             "oktaminer.Miner": "oktaminer.node:Miner",
-            "oktaminer.UserMiner": "oktaminer.node:UserMiner"
+            "oktaminer.UserMiner": "oktaminer.node:UserMiner",
+            "oktaminer.UserDetailMiner": "oktaminer.node:UserDetailMiner"
         },
         "minemeld_prototypes": {
             "oktaminer.prototypes": "oktaminer:prototypes"

@@ -6,7 +6,7 @@ prototypes:
   userMiner:
     author: jonghak choi
     class: oktaminer.UserMiner
-    development_status: EXPERIMENTAL
+    development_status: STABLE
     node_type: miner
     indicator_types:
       - IPv4
@@ -33,7 +33,7 @@ prototypes:
         confidence: 100
         share_level: green
 
-  userDetailMiner:
+  userdetailMiner:
     author: jonghak choi
     class: oktaminer.UserDetailMiner
     development_status: EXPERIMENTAL
@@ -49,7 +49,7 @@ prototypes:
     config:
       company: '<place a company name here>'
       api_key: '<place a valid API Key here>'
-      source_name: 'okta.useractivities'
+      source_name: 'okta.userdetail'
       verify_cert: true
       time_window: 7
       limit: 1000

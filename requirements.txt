@@ -1,2 +1,2 @@
 minemeld-core>=0.9
-requests
+requests=2.20.0

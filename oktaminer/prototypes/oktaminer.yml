@@ -3,7 +3,7 @@ description: >
   Okta extension for MineMeld.
 
 prototypes:
-  userMinor:
+  userMiner:
     author: jonghak choi
     class: oktaminer.UserMiner
     development_status: EXPERIMENTAL
@@ -23,6 +23,37 @@ prototypes:
       verify_cert: true
       time_window: 7
       limit: 1000
+      interval: 3600
+      age_out:
+        default: null
+        sudden_death: true
+        interval: 257
+      attributes:
+        type: IPv4
+        confidence: 100
+        share_level: green
+
+  userDetailMiner:
+    author: jonghak choi
+    class: oktaminer.UserDetailMiner
+    development_status: EXPERIMENTAL
+    node_type: miner
+    indicator_types:
+      - IPv4
+    tags:
+      - extension
+      - oktaminer
+    description: >
+      mine an User activities, you need to create a new prototype based on this with 
+      a valid Okta API Key
+    config:
+      company: '<place a company name here>'
+      api_key: '<place a valid API Key here>'
+      source_name: 'okta.useractivities'
+      verify_cert: true
+      time_window: 7
+      limit: 1000
+      interval: 3600
       age_out:
         default: null
         sudden_death: true

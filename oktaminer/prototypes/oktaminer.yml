@@ -21,7 +21,7 @@ prototypes:
       api_key: '<place a valid API Key here>'
       source_name: 'okta.useractivities'
       verify_cert: true
-      time_window: 8
+      time_window: 7
       limit: 1000
       age_out:
         default: null

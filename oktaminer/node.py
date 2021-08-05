@@ -195,7 +195,7 @@ class UserDetailMiner(BasePollerFT):
         value = {
             "type": "IPv4", "confidence": 100,
             "id": item['actor']['alternateId'],
-            "country": item['client']['geographical_context']['country'],
-            "state": item['request']['ip_chain']['geographical_context']['state'],
+            "country": item['client']['geographicalContext']['country'],
+            "state": item['client']['geographicalContext']['state'],
         }
         return [[indicator, value]]

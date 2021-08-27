@@ -179,9 +179,7 @@ class UserDetailMiner(BasePollerFT):
                 url = next_url
                 response = requests.get(url, headers=headers, verify=self.verify_cert)
                 response.raise_for_status()
-                result = response.json()
-                if result['client'].get('ipAddress'):
-                    results.extend(result)
+                results.extend(response.json())
         except:
             logger.debug(
                 "%s - exception in request: %s %s",
@@ -196,7 +194,7 @@ class UserDetailMiner(BasePollerFT):
         indicator = item["client"]["ipAddress"]
         value = {
             "type": "IPv4", "confidence": 100,
-            "id": item['actor']['alternateId']
+            "id": item['actor']['alternateId'],
         }
         if item['client'].get('geographicalContext'):
             value["country"] = item['client'].get('geographicalContext', {'country': 'N/A'})['country']
